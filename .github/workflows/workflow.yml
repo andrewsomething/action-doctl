@@ -39,6 +39,9 @@ jobs:
       - name: Verify log-in
         run: doctl compute region list
 
+      - name: Setup serverless
+        run: doctl serverless install
+
   test_custom_version_linux_and_mac:
     runs-on: ${{ matrix.os }}
     strategy:
